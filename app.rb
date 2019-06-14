@@ -12,8 +12,6 @@ class BattleApp < Sinatra::Base
     p params
     session[:player_1_name] = params[:player_1_name]
     session[:player_2_name] = params[:player_2_name]
-    # @player_1_name = params[:player_1_name]
-    # @player_2_name = params[:player_2_name]
     redirect to '/play'
   end
 
@@ -22,4 +20,11 @@ class BattleApp < Sinatra::Base
     @player_2_name = session[:player_2_name]
     erb :play
   end
+
+  post '/attack' do
+    @player_1_name = session[:player_1_name]
+    @player_2_name = session[:player_2_name]
+    erb :attack
+  end
+
 end

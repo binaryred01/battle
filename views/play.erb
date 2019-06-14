@@ -1,2 +1,7 @@
 <h1> Welcome to the battlefield! </h1>
-<%= @player_1_name %> vs <%= @player_2_name %>
+<%= @player_1_name %> vs <%= @player_2_name %> <br>
+<%= @player_2_name %>: HP
+
+<form action="/attack" method="post">
+  <input type="submit" value="Attack!">
+</form>
